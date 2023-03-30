@@ -7,7 +7,7 @@
     <meta name="description" content="My web page" />
     <meta name="keywords" content="html, css, web development, seo" />
 
-    <title>Real Estate</title>
+    <title>Working with Cookies</title>
 
     <link
       rel="stylesheet"
@@ -25,9 +25,72 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./assets/styles/index.css" media="all" />
+    <script src="./assets/script/index.js" defer></script>
   </head>
 
   <body>
-    <main></main>
+    <div class="overlay hidden"></div>
+    <div class="cookies hidden">
+      <h2>Cookies</h2>
+      <p class="consent">
+        We use cookies to improve your experience on website. By clicking
+        "Accept", you agree to use of cookies for marketeting and analytic
+        purposes.
+      </p>
+      <div class="btn">
+        <button class="accept">Accept</button>
+        <button class="setting">Setting</button>
+      </div>
+    </div>
+    <div class="select-cookies hidden">
+      <h2>Setting</h2>
+      <div class="checkboxes">
+        <div class="select">
+          <p>Browser</p>
+          <label class="switch">
+            <input type="checkbox" class="browser" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="select">
+          <p>Operating System</p>
+          <label class="switch">
+            <input type="checkbox" class="os" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="select">
+          <p>Screen Width</p>
+          <label class="switch">
+            <input type="checkbox" class="width" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="select">
+          <p>Screen Height</p>
+          <label class="switch">
+            <input type="checkbox" class="height" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+
+      <button class="save">Save Preferences</button>
+    </div>
+    <main>
+      <div class="container">
+        <p class="defination">
+          <span class="one">Cookies</span> are text files with
+          <span class="two">small pieces</span> of data like a username and
+          password that are used to identify your computer as you use a computer
+          network. Specific cookies known as HTTP cookies are used to identify
+          specific users and improve your web
+          <span class="three">browsing experience</span> .
+          <span class="four">Data stored</span> in a cookie is created by the
+          server upon your connection. This data is labeled with an ID unique to
+          you and your computer.
+        </p>
+      </div>
+    </main>
   </body>
 </html>
