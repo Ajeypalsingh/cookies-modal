@@ -1,6 +1,6 @@
 "use strict";
-const overlayWindow = document.querySelector(".overlay");
 const cookiesDialog = document.querySelector(".cookies");
+const overlayWindow = document.querySelector(".overlay");
 const settingDialog = document.querySelector(".select-cookies");
 const acceptCookies = document.querySelector(".accept");
 const settCookies = document.querySelector(".setting");
@@ -11,8 +11,7 @@ const screenWidth = document.querySelector(".width");
 const screenHeight = document.querySelector(".height");
 
 const showDialog = () => {
-  cookiesDialog.classList.remove("hidden");
-  overlayWindow.classList.remove("hidden");
+  cookiesDialog.showModal();
 };
 
 setTimeout(showDialog, 1000);
@@ -101,13 +100,12 @@ acceptCookies.addEventListener("click", () => {
   console.log(getCookie("os"));
   console.log(getCookie("width"));
   console.log(getCookie("height"));
-  cookiesDialog.classList.add("hidden");
-  overlayWindow.classList.add("hidden");
+  cookiesDialog.close();
 });
 
 settCookies.addEventListener("click", () => {
-  cookiesDialog.classList.add("hidden");
-  settingDialog.classList.remove("hidden");
+  cookiesDialog.close();
+  settingDialog.showModal();
 });
 
 userBrowser.checked = true;
@@ -129,10 +127,9 @@ saveCookies.addEventListener("click", () => {
     console.log(getCookie("width"));
   }
   if (screenHeight.checked === true) {
-    setCookie("height", width, { "max-age": 10 });
+    setCookie("height", height, { "max-age": 10 });
     console.log(getCookie("height"));
   }
 
-  settingDialog.classList.add("hidden");
-  overlayWindow.classList.add("hidden");
+  settingDialog.close();
 });

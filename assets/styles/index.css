@@ -52,6 +52,11 @@ main {
   z-index: 9999;
 }
 
+.cookies::backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
 .consent {
   margin-top: 5px;
 }
@@ -83,21 +88,6 @@ button {
   border: 1px solid #2727ff;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(1px);
-  z-index: 5555;
-}
-
-.hidden {
-  display: none;
-}
-
 .select-cookies {
   height: 260px;
   width: 280px;
@@ -110,6 +100,11 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 8888;
+}
+
+.select-cookies::backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
 }
 
 .save {
@@ -160,7 +155,7 @@ button {
 }
 
 input:checked + .slider {
-  background-color: #2727ff;
+  background-color: #740dce;
 }
 
 input:checked + .slider:before {
